@@ -1,0 +1,18 @@
+<div class="row text-center mb-5">
+    <ul class="list-group col-md-6 list-unstyled">
+        <li class="list-group-item-info mt-4">Temperature stats (kelvin)</li>
+        
+        <li class="list-group-item">Mean <span class="badge badge-info">{{ stats.temp.mean() }}</span></li>
+        <li class="list-group-item">Max <span class="badge badge-info">{{ stats.temp.max() }}</span></li>
+        <li class="list-group-item">Min <span class="badge badge-info">{{ stats.temp.min() }}</span></li>
+        <li class="list-group-item">Std <span class="badge badge-info">{{ stats.temp.std() }}</span></li>
+    </ul>
+    <ul class="list-group col-md-6 list-unstyled">        
+        <li class="list-group-item-info mt-4">Duration stats (seconds)</li>
+        
+        <li class="list-group-item">Mean <span class="badge badge-info">{{ stats.duration.mean() }}</span></li>
+        <li class="list-group-item">Max <span class="badge badge-info">{{ stats.duration.max() }}</span></li>
+        <li class="list-group-item">Min <span class="badge badge-info">{{ stats.duration.min() }}</span></li>
+        <li class="list-group-item">Std <span class="badge badge-info">{{ stats.duration.std() }}</span></li>
+    </ul>
+</div>

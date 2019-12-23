@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% if title %}
+        <title>Readings | {{ title }}</title>
+    {% else %}
+        <title>Readings | Home</title>
+    {% endif %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mb-3">
+       
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Readings Dashboard</a>
+        </div>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ml-5">
+                <a class="nav-link" href="#"># Data Requests <span class="badge badge-success">{{ count }}</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Last Request <span class="badge badge-success">{{ last_access.strftime("%m/%d/%Y, %H:%M:%S") }} UTC</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    {% include "stats.html" %}
+    {% include "table.html" %}
+</body>
+</html>
