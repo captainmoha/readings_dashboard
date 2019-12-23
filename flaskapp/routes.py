@@ -7,11 +7,13 @@ import pandas as pd
 
 
 def get_readings_df():
+    # load data from db into a dataframe for analysis and viewing
 
     readings_df = pd.read_sql_table('readings',
                                     con=db.engine,
                                     coerce_float=False)
 
+    # some formating for the dataframe
     readings_df.set_index(['index'], inplace=True)
     readings_df.index.name = None
     readings_df.columns.name = 'ID'
