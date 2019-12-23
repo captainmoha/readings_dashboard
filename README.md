@@ -1,11 +1,19 @@
 # Readings Dashboard Flask App
 
+### Contents
+- [Code Structure](#code-structure)
+- [Perspective](#perspective)
+- [Dependancies](#dependancies)
+- [Installation](#installation)
+- [Deployed App](#deployed-app)
+
+
 #### Code Structure
 ###### Code is divided into two main sections
 1. **load_csv_to_db.py** a script to load _**.csv**_ into a SQLite database.
 2. **flaskapp** directory. A **Flask** web application that serves data from database and logs each data access in the same database.
 
-#### Persepective
+#### Perspective
 - As per instructions, in **load_csv_to_db.py**, I loaded the data from **_task_data.csv_** into a database.
 - I used **Pandas** (Great at handling data) and **SQLalchemy** (ORM) to read the data from csv and create a database & table for it then load data into the db.
 - Afterwards, I created a **Flask** web app to serve the data from database in a neat(thanks **Bootstrap**) **HTML** format.
