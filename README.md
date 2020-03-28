@@ -1,5 +1,5 @@
-# Readings Dashboard Flask App
-
+# Readings Dashboard Demo Flask App
+A demo Python dashboard webapp that utilizes Pandas. With full documentation on how to run it and a deployed version of the code.
 ### Contents
 - [Code Structure](#code-structure)
 - [Perspective](#perspective)
@@ -14,7 +14,7 @@
 2. **flaskapp** directory. A **Flask** web application that serves data from database and logs each data access in the same database.
 
 #### Perspective
-- As per instructions, in **load_csv_to_db.py**, I loaded the data from **_task_data.csv_** into a database.
+- In **load_csv_to_db.py**, I loaded the data from **_task_data.csv_** into a database.
 - I used **Pandas** (Great at handling data) and **SQLalchemy** (ORM) to read the data from csv and create a database & table for it then load data into the db.
 - Afterwards, I created a **Flask** web app to serve the data from database in a neat(thanks **Bootstrap**) **HTML** format.
 - With each **GET** request a Log entry is created with a timestamp of when the data was accessed.
